@@ -8,7 +8,7 @@ public class Main {
 
     private static LinkedList<Integer> generate(int size) {
         LinkedList<Integer> list = new LinkedList<>();
-        for(int i = 0; i < size; i++) {
+        for (int i = 0; i < size; i++) {
             list.add((Integer) i);
         }
         return list;
@@ -21,8 +21,8 @@ public class Main {
 
         Long start1 = System.currentTimeMillis();
         Iterator<Integer> it = list1.iterator();
-        while(it.hasNext()) {
-            if(it.next().equals((Integer)randomIndex)) {
+        while (it.hasNext()) {
+            if (it.next().equals((Integer) randomIndex)) {
                 break;
             }
         }
@@ -38,8 +38,8 @@ public class Main {
 
         Long start3 = System.currentTimeMillis();
         Iterator<Integer> it2 = list1.iterator();
-        while(it.hasNext()) {
-            if(it.next().equals((Integer)randomIndex2)) {
+        while (it.hasNext()) {
+            if (it.next().equals((Integer) randomIndex2)) {
                 break;
             }
         }
@@ -55,3 +55,5 @@ public class Main {
         System.out.println("getting the same random index (" + randomIndex2 + " / 500000) from LinkedList of 500000 via LinkedList.get() takes " + (stop4 - start4) + " ms");
     }
 }
+
+
