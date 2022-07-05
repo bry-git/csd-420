@@ -9,14 +9,11 @@ import java.io.PrintStream;
 import java.util.concurrent.TimeUnit;
 
 public class BrysonThreeThreadTest {
-
-    private final ByteArrayOutputStream outputStorage = new ByteArrayOutputStream();
     private final PrintStream originalOut = System.out;
 
     @Test
     public void producesEnoughOutput() {
-
-        BrysonThreeThread btt = new BrysonThreeThread(outputStorage);
+        BrysonThreeThread btt = new BrysonThreeThread();
         ByteArrayOutputStream output = btt.run();
 
         try {
@@ -25,21 +22,32 @@ public class BrysonThreeThreadTest {
             Assert.fail();
         }
 
-        //Assert.assertTrue((outContent.toString().length()) > (10000 * 3));
-        //System.setOut(originalOut);
-        System.out.println("SEARCHFORME : " + output);
-        System.out.println(output.toString().length());
+        Assert.assertTrue((output.toString().length()) > (10000 * 3));
+        System.setOut(originalOut);
     }
 
-//    @Test
-//    public void producesCorrectCharacters() {
-//        //BrysonThreeThread.run(outContent);
-//
-//        try {
-//            TimeUnit.SECONDS.sleep(3);
-//        } catch (InterruptedException e) {
-//            Assert.fail();
-//        }
-//    }
+    @Test
+    public void producesCorrectCharacters() {
+        BrysonThreeThread btt = new BrysonThreeThread();
+        ByteArrayOutputStream output = btt.run();
 
+        try {
+            TimeUnit.SECONDS.sleep(5);
+        } catch (InterruptedException e) {
+            Assert.fail();
+        }
+
+        System.setOut(originalOut);
+        String outputs = output.toString();
+        String[] assertions = "abcdefghizklmnopqrstuvwxzy1234567890!@#$%^&*(){}:/><\"+=-~".split("");
+        for (int i = 0; i < assertions.length; i++ ) {
+            boolean result = outputs.contains(assertions[i]);
+            if(result){
+                System.out.println("Assertion #" + i + " : " + assertions[i] + " = " + result);
+            } else {
+                System.out.println("Assertion #" + i + " : " + assertions[i] + " = " + result);
+                Assert.fail();
+            }
+        }
+    }
 }

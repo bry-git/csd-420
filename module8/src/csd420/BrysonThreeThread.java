@@ -6,14 +6,14 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.IntStream;
 
 /**
- * damn
+ * this class exports its output in a ByteArrayOutputStream so I could practice capturing System.out and testing it with Junit
  * **/
 
 public class BrysonThreeThread {
     ByteArrayOutputStream outputStorage;
 
-    public BrysonThreeThread(ByteArrayOutputStream outputStorage) {
-        this.outputStorage = outputStorage;
+    public BrysonThreeThread() {
+        this.outputStorage = new ByteArrayOutputStream();
     }
 
     private static class AlphaGenerator implements Runnable{
@@ -86,8 +86,7 @@ public class BrysonThreeThread {
         t2.start();
         t3.start();
 
-        System.setOut(originalOut);
-        //System.out.println(outputStorage);
+        ByteArrayOutputStream out = this.outputStorage;
         return this.outputStorage;
     }
 }
