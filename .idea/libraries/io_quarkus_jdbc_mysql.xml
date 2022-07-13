@@ -1,0 +1,33 @@
+<component name="libraryTable">
+  <library name="io.quarkus.jdbc.mysql" type="repository">
+    <properties maven-id="io.quarkus:quarkus-jdbc-mysql:1.5.1.Final" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/quarkus-jdbc-mysql-1.5.1.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/quarkus-core-1.5.1.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jakarta.annotation-api-1.3.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jakarta.enterprise.cdi-api-2.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jakarta.el-api-3.0.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jakarta.interceptor-api-1.2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jakarta.ejb-api-3.2.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jakarta.transaction-api-1.3.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jakarta.inject-api-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/quarkus-ide-launcher-1.5.1.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/quarkus-development-mode-spi-1.5.1.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/smallrye-config-1.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/smallrye-config-common-1.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/microprofile-config-api-1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jboss-logging-3.3.2.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jboss-logmanager-embedded-1.0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jboss-logging-annotations-2.1.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jboss-threads-3.1.1.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/slf4j-api-1.7.30.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/slf4j-jboss-logging-1.2.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/graal-sdk-19.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/wildfly-common-1.5.4.Final-format-001.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/quarkus-bootstrap-runner-1.5.1.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mysql-connector-java-8.0.20.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
